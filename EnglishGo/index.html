@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EnglishGo 🇬🇧 — Ingliz tilini o‘rganing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">English<span>Go</span> 🇬🇧</a>
+    <ul class="nav-links">
+      <li><a href="#features">Imkoniyatlar</a></li>
+      <li><a href="#practice">Mashq</a></li>
+      <li><a href="#pricing">Tariflar</a></li>
+      <li><a href="#about">Sayt haqida</a></li>
+      <li><a href="#reviews">Fikrlar</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button id="navLoginBtn" class="btn btn-ghost" type="button">O‘rganishni boshlash</button>
+      <button id="navStartBtn" class="btn btn-amber">Bepul boshlash</button>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#features">Imkoniyatlar</a>
+    <a href="#practice">Mashq</a>
+    <a href="#pricing">Tariflar</a>
+    <a href="#reviews">Fikrlar</a>
+    <a href="#about">Sayt haqida</a>
+    <a href="#practice" id="mobileStartLink">O‘rganishni boshlash →</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Gaplarni real vaqtda tahlil qiladi</span>
+      <h1>Ingliz tilida <em>erkin gapiring</em>, faqat yodlab qolmang.</h1>
+      <p class="lead">EnglishGo yozish va gapirishdagi xatolaringizni tahlil qiladi va sizga mos mashq yo‘lini yaratadi.</p>
+      <div class="hero-ctas">
+        <button id="startLearningBtn" class="btn btn-amber">Bepul boshlash</button>
+        <a href="#features" class="btn btn-ghost">Qanday ishlashini ko‘ring</a>
+      </div>
+      <p class="hero-note">Karta kerak emas · 2 daqiqalik boshlang‘ich test · Qurilmada saqlanadi</p>
+    </div>
+    <div class="demo-card">
+      <div class="demo-top"><span>Jonli tuzatish</span><div class="dots"><i></i><i></i><i></i></div></div>
+      <p class="demo-sentence">"Yesterday I <span class="wrong" id="wrongWord">have went</span> to the market and I buyed some apples."</p>
+      <div class="demo-fix"><b>Fix:</b>&nbsp;"went" is simple past — pair it with "went," not "have went." Say: <i>"I went to the market and bought some apples."</i></div>
+      <div class="demo-meter">
+        <div class="row"><span>Ravonlik darajasi</span><span id="meterPct">0%</span></div>
+        <div class="meter-track"><div class="meter-fill" id="meterFill"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="on-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Nega EnglishGo?</span>
+      <h2>Sizga mos o‘rganish tizimi</h2>
+      <p>EnglishGo xatolaringizni tahlil qilib, ularni shaxsiy o‘quv rejangizga aylantiradi.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat"><div class="ic">✎</div><h3>Tezkor grammatika tuzatishi</h3><p>Gap yozing yoki ayting — xato va uning tushunarli izohini oling.</p></div>
+      <div class="feat"><div class="ic">🗣</div><h3>Gapirish va fikr-mulohaza</h3><p>Mashq out loud and get pointers on pace, stress, and pronunciation of the sounds you struggle with most.</p></div>
+      <div class="feat"><div class="ic">🃏</div><h3>Moslashuvchan kartochkalar</h3><p>Qiyin so‘zlar tez-tez qaytadi, o‘rgangan so‘zlar esa kamroq chiqadi.</p></div>
+      <div class="feat"><div class="ic">🎯</div><h3>Kunlik mini-testlar</h3><p>Har kuni kuchsiz mavzularingizga mos qisqa savollar.</p></div>
+      <div class="feat"><div class="ic">📈</div><h3>Sizga mos o‘quv yo‘li</h3><p>Har mashqdan keyin o‘quv yo‘lingiz yangilanadi.</p></div>
+      <div class="feat"><div class="ic">🔥</div><h3>Foydali streak tizimi</h3><p>Muntazamlikni kuzatamiz — bu ingliz tilini rivojlantirishning muhim qismi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="on-paper" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Hozir sinab ko‘ring</span>
+      <h2>Haqiqiy mashqni shu yerda bajaring</h2>
+      <p>Kartochkalarni aylantiring, testni bajaring va natijalar shu qurilmada saqlanadi.</p>
+    </div>
+    <div class="practice-tabs">
+      <button class="tab-btn active" data-tab="cards">So‘z kartochkalari</button>
+      <button class="tab-btn" data-tab="quiz">Tezkor test</button>
+    </div>
+
+    <div class="panel active" id="panel-cards">
+      <div class="card-stage">
+        <div class="flip-card" id="flipCard">
+          <div class="flip-inner">
+            <div class="face face-front">
+              <div class="word" id="cardWord">resilient</div>
+              <div class="pos" id="cardPos">adjective</div>
+              <div class="hint">Ma’nosini ko‘rish uchun bosing</div>
+            </div>
+            <div class="face face-back">
+              <div class="def" id="cardDef">Able to recover quickly from difficulties; tough.</div>
+              <div class="ex" id="cardEx">"She stayed resilient through the whole exam season."</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-controls">
+          <button class="icon-btn bad" id="knewNo" title="Hali o‘rganmoqdaman">✕</button>
+          <button class="icon-btn" id="shuffleCard" title="O‘tkazish">↻</button>
+          <button class="icon-btn good" id="knewYes" title="Bilardim">✓</button>
+        </div>
+        <div class="deck-progress" id="deckProgress">1 / 8 · Bu mashqda 0 ta o‘zlashtirildi</div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-quiz">
+      <div class="quiz-box" id="quizBox"></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b id="statStreak">0</b><span>Kunlik streak</span></div>
+      <div class="stat"><b id="statMastered">0</b><span>O‘zlashtirilgan so‘zlar</span></div>
+      <div class="stat"><b id="statQuiz">0%</b><span>Eng yaxshi test</span></div>
+      <div class="stat"><b id="statSessions">0</b><span>Bajarilgan mashqlar</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">O‘quvchilar fikri</span>
+      <h2>Natija uzoq kutishni talab qilmaydi</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi"><p>"Grammatika mashqlari orqali xatolarimni yaxshiroq tushuna boshladim."</p><div class="who"><div class="avatar" style="background:var(--amber)">DK</div><div><b>Dilnoza K.</b><span>O‘quvchi</span></div></div></div>
+      <div class="testi"><p>"Kunlik testlar qisqa va qulay, shuning uchun mashqni tashlab qo‘ymayman."</p><div class="who"><div class="avatar" style="background:var(--teal)">RM</div><div><b>Rustam M.</b><span>Talaba</span></div></div></div>
+      <div class="testi"><p>"So‘z kartochkalari that actually forget the words I already know — sounds small, but it cut my study time in half."</p><div class="who"><div class="avatar" style="background:#8C7BD8">AS</div><div><b>Aziza S.</b><span>Dasturchi</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="on-paper about-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Sayt haqida</span>
+      <h2>EnglishGo — o‘zbek o‘quvchilari uchun ingliz tili platformasi</h2>
+      <p>EnglishGo so‘z boyligi, grammatika, listening, speaking va kunlik mashqlarni bitta qulay platformaga jamlaydi.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">🇬🇧</div>
+        <h3>EnglishGo</h3>
+        <p>O‘rganing, mashq qiling, natijangizni kuzating va har kuni oz-ozdan rivojlaning.</p>
+      </div>
+      <div class="about-card owner-card">
+        <div class="owner-badge">OWNER</div>
+        <h3>Sayt menejeri va yaratuvchisi</h3>
+        <p class="owner-name">Xorun Najmiddinov</p>
+        <p>EnglishGo loyihasining egasi, yaratuvchisi va menejeri.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="on-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Tariflar</span>
+      <h2>Bepul boshlang. Kerak bo‘lsa Premiumga o‘ting.</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Boshlang‘ich</h3>
+        <div class="price-amt">$0<span>/mo</span></div>
+        <ul><li>Daily quiz (5 questions)</li><li>50-word flashcard deck</li><li>Basic correction feedback</li><li>1 device</li></ul>
+        <a href="#practice" class="btn btn-ghost" style="border-color:var(--ink); color:var(--ink); width:100%;">Boshlash</a>
+      </div>
+      <div class="price-card pop">
+        <span class="pop-badge">Eng mashhur</span>
+        <h3>Premium</h3>
+        <div class="price-amt">$9<span>/mo</span></div>
+        <ul><li>Unlimited quizzes &amp; decks</li><li>Speaking feedback</li><li>Full correction reasoning</li><li>Adaptive curriculum</li><li>Sync across devices</li></ul>
+        <a href="#practice" class="btn btn-amber" style="width:100%;">Bepul sinab ko‘rish</a>
+      </div>
+      <div class="price-card">
+        <h3>Jamoa</h3>
+        <div class="price-amt">$29<span>/mo</span></div>
+        <ul><li>Everything in Premium</li><li>Up to 10 learners</li><li>Progress dashboard</li><li>Priority support</li></ul>
+        <a href="#practice" class="btn btn-ghost" style="border-color:var(--ink); color:var(--ink); width:100%;">Bog‘lanish</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Keyingi gapingiz yanada yaxshiroq bo‘lishi mumkin.</h2>
+  <p>Bepul boshlang — natijalaringiz avtomatik saqlanadi.</p>
+  <form class="email-form" id="emailForm">
+    <input type="email" id="emailInput" placeholder="you@example.com" required>
+    <button class="btn btn-amber" type="submit">Boshlash</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <a class="logo" href="#top">English<span style="color:var(--amber)">Go</span> 🇬🇧</a>
+    <nav class="foot-links">
+      <a href="#features">Imkoniyatlar</a><a href="#practice">Mashq</a><a href="#pricing">Tariflar</a><a href="#reviews">Fikrlar</a><a href="#about">Sayt haqida</a>
+    </nav>
+  </div>
+  <p class="copyright">© 2026 EnglishGo. Hackathon loyihasi sifatida yaratilgan.</p>
+</footer>
+
+<div class="app-overlay" id="appOverlay">
+  <div class="app-top">
+    <div class="app-id">English<span style="color:var(--amber)">Boost</span></div>
+    <div class="app-meta">
+      <span class="xp-chip" id="xpChip">0 XP</span>
+      <span class="xp-chip" id="streakChip">🔥 0</span>
+      <button class="close-app" id="closeAppBtn" aria-label="Ortga qaytish" title="Ortga">←</button>
+    </div>
+  </div>
+  <div class="app-pills" id="appPills"></div>
+  <div class="app-body" id="appBody"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
